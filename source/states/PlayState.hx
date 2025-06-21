@@ -1267,8 +1267,8 @@ class PlayState extends MusicBeatState {
 		FlxG.sound.music.pitch = playbackRate;
 		#end
 		FlxG.sound.music.onComplete = finishSong.bind();
-		vocals.play();
-		opponentVocals.play();
+		vocals.pause();
+		opponentVocals.pause();
 
 		setSongTime(Math.max(0, startOnTime - 500) + Conductor.offset);
 		startOnTime = 0;
