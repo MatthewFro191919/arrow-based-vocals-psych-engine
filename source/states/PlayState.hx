@@ -3691,3 +3691,22 @@ class PlayState extends MusicBeatState {
 		return false;
 	}
 }
+
+
+
+// 9-Key Strumline Setup
+var keyCount:Int = 9;
+
+// Generate player strums
+for (i in 0...keyCount) {
+    var strum = new StrumNote(0, 50, i, 1); // player = 1
+    strum.x = 92 + (112 * i); // Centered spacing
+    playerStrums.add(strum);
+}
+
+// Generate opponent strums
+for (i in 0...keyCount) {
+    var strum = new StrumNote(0, 50, i, 0); // player = 0
+    strum.x = 92 + (112 * i); // Same spacing for CPU
+    cpuStrums.add(strum);
+}
